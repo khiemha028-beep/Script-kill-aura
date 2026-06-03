@@ -1,0 +1,2 @@
+# Script-kill-aura
+Gg
