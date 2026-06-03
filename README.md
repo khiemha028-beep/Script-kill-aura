@@ -1,2 +1,20 @@
 # Script-kill-aura
 Gg
+-- LocalScript trong ScreenGui
+
+local frame = script.Parent.Frame
+local button = frame.ToggleDamage
+
+local enabled = false
+
+button.MouseButton1Click:Connect(function()
+    enabled = not enabled
+
+    if enabled then
+        button.Text = "Damage Aura: ON"
+    else
+        button.Text = "Damage Aura: OFF"
+    end
+
+    game.ReplicatedStorage.ToggleDamageAura:FireServer(enabled)
+end)
